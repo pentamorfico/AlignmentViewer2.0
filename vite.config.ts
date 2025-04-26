@@ -15,6 +15,21 @@ export default defineConfig({
     }
   },
   build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'AlignmentViewer2',
+      fileName: (format) => `alignment-viewer-2.${format}.js`,
+      formats: ['es', 'cjs']
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
+    },
     outDir: 'dist',
     sourcemap: true
   },

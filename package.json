@@ -4,7 +4,8 @@
   "version": "2.0.0-beta-2",
   "private": false,
   "author": "Nicholas Gauthier",
-  "module": "dist/js/index.js",
+  "main": "dist/alignment-viewer-2.cjs.js",
+  "module": "dist/alignment-viewer-2.es.js",
   "types": "dist/js/index.d.ts",
   "contributors": [
     "Yang Su",
