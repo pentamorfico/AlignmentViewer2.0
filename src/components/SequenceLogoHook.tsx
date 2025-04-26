@@ -5,7 +5,7 @@
  * Fills the available space
  */
 import "./SequenceLogo.scss";
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { Tooltip, TooltipRefProps } from 'react-tooltip';
 import { Alignment } from "../common/Alignment";
 import { GlyphFactory, LogoFonts } from "../common/SequenceLogoGlyphs";

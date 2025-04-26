@@ -6,7 +6,7 @@
  * https://medium.com/@teh_builder/ref-objects-inside-useeffect-hooks-eb7c15198780
  */
 import "./ResizeSensor.scss";
-import React, { useRef, ReactNode, useEffect } from "react";
+import { useRef, ReactNode, useEffect } from "react";
 import useSize from "@react-hook/size"
 
 export interface IBounds {

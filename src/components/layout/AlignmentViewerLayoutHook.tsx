@@ -1,11 +1,11 @@
 import "./AlignmentViewerLayout.scss"
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, Fragment } from "react";
 import { useResizeGrid } from "./ResizeGridHook";
 import { IBounds, ReactResizeSensor } from "../ResizeSensorHook";
 
 export interface IMetadataAndContent{
-  metadata: string | React.JSX.Element;
-  content: React.JSX.Element;
+  metadata: string | JSX.Element;
+  content: JSX.Element;
 }
 
 export interface IMetadataContentAndHeight extends IMetadataAndContent{
@@ -44,7 +44,7 @@ export type IAlignmentViewerLayoutProps = {
   query?: IMetadataContentAndHeight,
   positionalAxis?: IMetadataContentAndHeight,
   logoPlot?: IMetadataAndContent,
-  minimapPlot?: React.JSX.Element,
+  minimapPlot?: JSX.Element,
 
   showConsensus: boolean,
   showQuery: boolean,
@@ -222,7 +222,7 @@ export function AlignmentViewerLayout(props: IAlignmentViewerLayoutProps) {
     return !metadataAndContent 
       ? undefined 
       : (//empty tag doesn't support key, so need to use fragment
-        <React.Fragment key={key}>
+        <Fragment key={key}>
           <div 
             className={metadataClassname} 
             style={{
@@ -242,7 +242,7 @@ export function AlignmentViewerLayout(props: IAlignmentViewerLayoutProps) {
             }}>
             {metadataAndContent.content}
           </div>
-        </React.Fragment>
+        </Fragment>
       );
   }, [
     showMetadata,
@@ -563,7 +563,7 @@ export function AlignmentViewerLayout(props: IAlignmentViewerLayoutProps) {
               const metadataGridArea = `barplot-${bp.contentKey}-metadata`;
               const contentGridArea = `barplot-${bp.contentKey}`;
               return (
-                <React.Fragment key={bp.contentKey}>
+                <Fragment key={bp.contentKey}>
                   {renderWidget({
                     key: `bp-${bp.contentKey}`,
                     metadataAndContent: bp,
@@ -575,7 +575,7 @@ export function AlignmentViewerLayout(props: IAlignmentViewerLayoutProps) {
                     ? <></>
                     : barplotResizers.resizeSeparators[bp.contentKey]//<div className="vertical-resizer" style={{gridArea: `${contentGridArea}-resizer`}}/>
                   }
-                </React.Fragment>
+                </Fragment>
               );
             })
           }

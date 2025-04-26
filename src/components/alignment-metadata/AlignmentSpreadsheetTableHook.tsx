@@ -1,7 +1,7 @@
 /**
  * Base hook for pure webgl alignment details.
  */
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState, Fragment } from "react";
 
 import { 
   VirtualizedMatrixViewer 
@@ -168,7 +168,7 @@ export function AlignmentSpreadsheetTable(props: IAlignmentSpreadsheetTableProps
             const headerDivs = columnKeys.map((colKey, idx) => {
               const gridAreaKey = normalizedColumnKeys[idx];
               return (
-                <React.Fragment key={idx}>
+                <Fragment key={idx}>
                   <div 
                     className="column-header"
                     style={{
@@ -180,7 +180,7 @@ export function AlignmentSpreadsheetTable(props: IAlignmentSpreadsheetTableProps
                       : "\u00A0"}
                   </div>
                   {colResizers.resizeSeparators[gridAreaKey]}
-                </React.Fragment>
+                </Fragment>
               )
             });
 
@@ -192,7 +192,7 @@ export function AlignmentSpreadsheetTable(props: IAlignmentSpreadsheetTableProps
                 className += " rownum"
               }
               return (
-                <React.Fragment key={colIdx}>
+                <Fragment key={colIdx}>
                   <div className={className} style={{
                     gridArea: gridAreaKey,
                     gridAutoRows: `${rowHeight}px`,
@@ -209,7 +209,7 @@ export function AlignmentSpreadsheetTable(props: IAlignmentSpreadsheetTableProps
                   </div>
                   
                   {colResizers.resizeSeparators[gridAreaKey]}
-                </React.Fragment>
+                </Fragment>
               )
             });
 

@@ -2,7 +2,7 @@
  * Hooks for pure webgl alignment details.
  */
 import "./MSABlocksAndLetters.scss"
-import React, { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import {
   AminoAcidAlignmentTypeInstance,
   AminoAcidColorSchemes,

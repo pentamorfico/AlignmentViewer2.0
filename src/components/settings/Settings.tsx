@@ -1,5 +1,5 @@
 import "./Settings.scss";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SequenceSorter, SequenceSorterInstance } from "../../common/AlignmentSorter";
 import {
   AminoAcidColorSchemes,

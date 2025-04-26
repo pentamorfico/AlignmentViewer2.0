@@ -1,5 +1,5 @@
 import './VirtualizedMatrixViewer.scss';
-import React, { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo, Fragment } from "react";
 import * as PIXI from "pixi.js";
 
 import { IBounds, ReactResizeSensor } from "../ResizeSensorHook";
@@ -361,7 +361,7 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
     horizVirtualizationAxis?.worldOffsetPx
   ]);
   
-  const handleWheelFn = useCallback((event: React.WheelEvent<HTMLDivElement>) => {
+  const handleWheelFn = useCallback((event: WheelEvent<HTMLDivElement>) => {
     if (event.deltaX !== 0 && horizSetWorldOffsetPx){
       horizSetWorldOffsetPx(
         horizVirtualizationAxis.worldOffsetPx + event.deltaX
@@ -380,7 +380,7 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
   ]);
 
   /*
-  const handleClickFn = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>)=>{
+  const handleClickFn = useCallback((event: MouseEvent<HTMLDivElement, MouseEvent>)=>{
     const bounds = event.currentTarget.getBoundingClientRect();
     const viewportX = event.clientX - bounds.left < 0 ? 0 : event.clientX - bounds.left;
     const viewportY = event.clientY - bounds.top < 0 ? 0 : event.clientY - bounds.top;
@@ -409,7 +409,7 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
   const setColHovered = horizVirtualizationAxis?.setHoveredOffsetPx;
   const setRowHovered = vertVirtualizationAxis?.setHoveredOffsetPx;
 
-  const handleMousemoveFn = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMousemoveFn = useCallback((event: MouseEvent<HTMLDivElement, MouseEvent>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
     const viewportX = event.clientX - bounds.left < 0 ? 0 : event.clientX - bounds.left;
     const viewportY = event.clientY - bounds.top < 0 ? 0 : event.clientY - bounds.top;
@@ -449,7 +449,7 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
     return (
       <>
         {!vertParams?.hoverTracker ? undefined : 
-          <React.Fragment key={'vert'}>
+          <Fragment key={'vert'}>
             <div className="hover-tracker-y triangle-right" style={{
               left: containerBounds.getLiveLeft() - hoverTrackerSize,
               top: containerBounds.getLiveTop()
@@ -464,10 +464,10 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
                   - (hoverTrackerSize/2), //half the height
               display: showYLeft ? "block" : "none"
             }}/>
-          </React.Fragment>
+          </Fragment>
         }
         {!horizParams?.hoverTracker ? undefined : 
-          <React.Fragment key={'horiz'}>
+          <Fragment key={'horiz'}>
             <div className="hover-tracker-x triangle-down" style={{
               top: containerBounds.getLiveTop() - hoverTrackerSize,
               left: containerBounds.getLiveLeft()
@@ -483,7 +483,7 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
                     - (hoverTrackerSize/2), // 1/2 the width
               display: showXUp ? "block" : "none"
             }}/>
-          </React.Fragment>
+          </Fragment>
         }
       </>
     );

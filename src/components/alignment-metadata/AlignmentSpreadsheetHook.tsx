@@ -2,7 +2,7 @@
  * Base hook for a spreadsheet to show annotations.
  */
 import "./AlignmentSpreadsheet.scss";
-import React, { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import { 
   generateUUIDv4

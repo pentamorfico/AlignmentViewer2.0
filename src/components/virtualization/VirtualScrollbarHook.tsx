@@ -2,7 +2,7 @@
  * Base react hook for a virtual vertical scrollbar.
  */
 import "./VirtualScrollbars.scss";
-import React, { useState, useCallback, useMemo, useRef } from "react";
+import { useState, useCallback, useMemo, useRef } from "react";
 import useSize from "@react-hook/size";
 
 interface IVirtualScrollbarProps {

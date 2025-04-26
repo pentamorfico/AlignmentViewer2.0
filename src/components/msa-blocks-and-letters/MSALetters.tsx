@@ -1,7 +1,7 @@
 /**
  * Hooks for pure webgl alignment details.
  */
-import React, { useMemo } from "react";
+import { useMemo, Fragment } from "react";
 import {
   AminoAcidAlignmentTypeInstance,
   AminoacidColorSchemeInstance,
@@ -151,10 +151,10 @@ export function MSALetters(props: {
           >
             {colorStrings.map((seqStr, idx) => {
               return (
-                <React.Fragment key={idx + seqStr}>
+                <Fragment key={idx + seqStr}>
                   {seqStr}
                   <br />
-                </React.Fragment>
+                </Fragment>
               );
             })}
           </div>
@@ -207,9 +207,9 @@ export function MSALetters(props: {
         }}>
         {sequencesInViewport.map((seqStr, idx) => {
           return (
-            <React.Fragment key={idx + seqStr}>
+            <Fragment key={idx + seqStr}>
               {seqStr} <br />
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </div>

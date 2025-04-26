@@ -1,6 +1,6 @@
 import "./Settings.scss";
 import { IPropObjectInstanceInList } from "../../common/GlobalEnumObject";
-import React, { useCallback, useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef } from "react";
 
 import Select, { MultiValue } from 'react-select'
 

@@ -88,12 +88,16 @@ export class GlyphFactory {
       ]>).reduce((acc2, [char, dStr]) => {
         acc2[char as AvailableGlyphs] = (
           pathProps: { [key: string]: string }
-        ) => (
-          <path
-            {...pathProps}          
-            d={dStr}
-          />
-        )
+        ) => {
+          const { key, ...restProps } = pathProps;
+          return (
+            <path
+              key={key}
+              {...restProps}
+              d={dStr}
+            />
+          );
+        }
         return acc2;
       }, {} as ILetterToGlyphHM)
     )
