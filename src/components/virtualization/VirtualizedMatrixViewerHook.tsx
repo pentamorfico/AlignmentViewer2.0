@@ -1,7 +1,4 @@
-/**
- * Base react hook for a virtual text viewer.
- */
-import styles from "./VirtualizedMatrixViewer.scss";
+import './VirtualizedMatrixViewer.scss';
 import React, { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import * as PIXI from "pixi.js";
 
@@ -432,10 +429,10 @@ function GenericVirtualizedMatrixViewer(props: IVirtualizedMatrixOrRowOrColumn) 
     setRowHovered
   ]);
 
+  const hoverTrackerSize = 12; // was: +styles.hoverTrackerSize; keep in sync with SCSS
+
   const renderedHoverContent = useMemo(()=>{
     if(!containerBounds) { return undefined; }
-    const hoverTrackerSize = +styles.hoverTrackerSize; //needs to also be managed in css
-    
     const showYRight = vertVirtualizationAxis?.hoveredEvent && (
       vertParams?.hoverTracker === "start" || vertParams?.hoverTracker === "both"
     );

@@ -187,7 +187,7 @@ export default function App(){
                     alt="Alignment Viewer 2.0 GitHub Repo"
                     width="16"
                     height="16"
-                    src={`${process.env.PUBLIC_URL}/github-mark.svg`}
+                    src={`/github-mark.svg`}
                   /> 
                 </a>
     
@@ -247,7 +247,7 @@ export default function App(){
                     alt="Download Alignment" 
                     width="16"
                     height="16"
-                    src={`${process.env.PUBLIC_URL}/download.svg`}
+                    src={`/download.svg`}
                   />
                 </button>
                 
@@ -264,7 +264,7 @@ export default function App(){
                     alt="Show Search"
                     width="16"
                     height="16"
-                    src={`${process.env.PUBLIC_URL}/search.svg`}
+                    src={`/search.svg`}
                   />
                 </button>
 
@@ -285,7 +285,7 @@ export default function App(){
                     alt="Show Settings Box"
                     width="16"
                     height="16"
-                    src={`${process.env.PUBLIC_URL}/settings.svg`}
+                    src={`/settings.svg`}
                   />
                 </button>
               </div> 

@@ -693,7 +693,7 @@ export default function useAV2Settings(props:{
             <AlignmentExampleFile 
               id={"beta-lactamase"}
               labelText={"β-lactamase"} 
-              fileURL={`${process.env.PUBLIC_URL}/7fa1c5691376beab198788a726917d48_b0.4.a2m`} 
+              fileURL={`/7fa1c5691376beab198788a726917d48_b0.4.a2m`} 
               fileName={"7fa1c5691376beab198788a726917d48_b0.4.a2m"} 
               removeDuplicateSeqs={state.removeDuplicateSequences} 
               onFileLoadStart={startAlignmentLoading}
@@ -702,7 +702,7 @@ export default function useAV2Settings(props:{
             <AlignmentExampleFile 
               id={"covid-spike"}
               labelText={"SARS-CoV-2 Spike"} 
-              fileURL={`${process.env.PUBLIC_URL}/Spike_Full_f05_m05_t08.a2m`} 
+              fileURL={`/Spike_Full_f05_m05_t08.a2m`} 
               fileName={"Spike_Full_f05_m05_t08.a2m"} 
               removeDuplicateSeqs={state.removeDuplicateSequences} 
               onFileLoadStart={startAlignmentLoading}
@@ -757,7 +757,7 @@ export default function useAV2Settings(props:{
                     alt="Close Search Box" 
                     width="16"
                     height="16"
-                    src={`${process.env.PUBLIC_URL}/close.svg`}/>
+                    src={`/close.svg`}/>
               </button>
             </div>
             {renderedSettings}

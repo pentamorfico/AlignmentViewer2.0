@@ -1,4 +1,7 @@
-# Alignment Viewer 2.0
+# Alignment Viewer 2.0 -- 
+
+> [!IMPORTANT]  
+> Fork modified to work with Vite + React + npm instead of webpack, node and yarn
 
 Alignment Viewer 2.0 is a standalone [multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) (MSA) viewer written in TypeScript with the React framework. The project is primarily aimed at performance with the goal of enabling visualization and analysis of very
 large alignemnts (up to hundreds of millions of residues).
@@ -40,7 +43,7 @@ Example links:
 We're on [NPM](https://www.npmjs.com/) ([repository link](https://https://www.npmjs.com/package/alignment-viewer-2/)) so you can install using your favorite package manager, e.g.,:
 
 ```sh
-yarn add alignment-viewer-2
+npm install alignment-viewer-2
 ```
 
 Once installed, adding to your website is as simple as:
@@ -72,25 +75,24 @@ const alignmentObj = FastaAlignment.fromFileContents(
 ```sh
 git clone https://github.com/sanderlab/AlignmentViewer2.0.git
 cd AlignmentViewer2.0
-yarn
+npm install
 ```
 
 ## Run the Alignment Viewer 2.0 demo site locally
 ```sh
-yarn start
+npm run dev
 ```
 
 ## Build and run Alignment Viewer 2.0 locally
 ```sh
-yarn build
-cd build
+npm run build
+cd dist
 python3 -m http.server
 ```
 
-
-## Running Unit Tests - **BROKEN**
+## Running Unit Tests
 ```sh
-yarn test
+npm test
 ```
 
 ## Performance Strategy
