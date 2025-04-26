@@ -7,6 +7,12 @@
   "main": "dist/alignment-viewer-2.cjs.js",
   "module": "dist/alignment-viewer-2.es.js",
   "types": "dist/js/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/alignment-viewer-2.es.js",
+      "require": "./dist/alignment-viewer-2.cjs.js"
+    }
+  },
   "contributors": [
     "Yang Su",
     "Andrew Diamantoukos",
@@ -59,7 +65,8 @@
     "test": "jest",
     "cover": "jest --coverage --watchAll=false",
     "build-and-deploy": "npm run build && npm run deploy",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "build:types": "tsc -p tsconfig.dist.json"
   },
   "files": [
     "dist"
