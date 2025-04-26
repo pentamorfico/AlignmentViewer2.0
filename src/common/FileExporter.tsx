@@ -1,5 +1,3 @@
-import React from "react";
-
 //for generating string of JSX element
 //see https://react.dev/reference/react-dom/server/renderToString#removing-rendertostring-from-the-client-code
 import { createRoot } from 'react-dom/client';

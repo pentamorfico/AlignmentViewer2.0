@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, useRef } from "react";
 import "./App.scss";
 import { downloadFullViewportSVG } from "./common/FileExporter"
 import { 
@@ -9,7 +9,7 @@ import { shallowEqual } from "react-redux";
 import useAV2Settings from "./components/settings/Settings";
 
 export default function App(){
-  const triggerShowSearch = React.useRef<() => void | undefined>();
+  const triggerShowSearch = useRef<() => void | undefined>();
 
   //local state
   const [state, setState] = useState({
