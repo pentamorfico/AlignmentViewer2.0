@@ -1,4 +1,4 @@
-# Alignment Viewer 2.0 -- 
+# Alignment Viewer 2.0 
 
 > [!IMPORTANT]  
 > Fork modified to work with Vite + React + npm instead of webpack, node and yarn
