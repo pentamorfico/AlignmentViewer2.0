@@ -11,8 +11,10 @@
     ".": {
       "import": "./dist/alignment-viewer-2.es.js",
       "require": "./dist/alignment-viewer-2.cjs.js"
-    }
+    },
+    "./style.css": "./dist/style.css"
   },
+  "style": "dist/style.css",
   "contributors": [
     "Yang Su",
     "Andrew Diamantoukos",
