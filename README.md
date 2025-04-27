@@ -73,7 +73,7 @@ const alignmentObj = FastaAlignment.fromFileContents(
 ## Download code and gather dependencies
 
 ```sh
-git clone https://github.com/sanderlab/AlignmentViewer2.0.git
+git clone https://github.com/pentamorfico/AlignmentViewer2.0.git
 cd AlignmentViewer2.0
 npm install
 ```
@@ -83,17 +83,6 @@ npm install
 npm run dev
 ```
 
-## Build and run Alignment Viewer 2.0 locally
-```sh
-npm run build
-cd dist
-python3 -m http.server
-```
-
-## Running Unit Tests
-```sh
-npm test
-```
 
 ## Performance Strategy
 
