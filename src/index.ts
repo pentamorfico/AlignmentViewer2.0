@@ -1,3 +1,19 @@
+import "./App.scss";
+import "./components/SequenceLogo.scss";
+import "./components/PositionalAxis.scss";
+import "./components/PositionalBarplot.scss";
+import "./components/msa-blocks-and-letters/MSABlocksAndLetters.scss";
+import "./components/settings/Settings.scss";
+import "./components/AlignmentFileLoader.scss";
+import "./components/ResizeSensor.scss";
+import "./components/minimap/MiniMap.scss";
+import "./components/virtualization/VirtualizedMatrixViewer.scss";
+import "./components/virtualization/VirtualScrollbars.scss";
+import "./components/search/SequenceSearch.scss";
+import "./components/layout/AlignmentViewerLayout.scss";
+import "./components/alignment-metadata/AlignmentSpreadsheet.scss";
+import "./common/MolecularStyles.module.scss";
+
 export * from "./common/Alignment.js";
 export * from "./common/AlignmentLoader.js";
 export * from "./common/AlignmentSorter.js";
