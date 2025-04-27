@@ -1,4 +1,3 @@
-import "./App.scss";
 import "./components/SequenceLogo.scss";
 import "./components/PositionalAxis.scss";
 import "./components/PositionalBarplot.scss";
