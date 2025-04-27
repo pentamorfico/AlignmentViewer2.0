@@ -40,20 +40,20 @@ Example links:
 
 ## Embedding Alignment Viewer 2.0
 
+> [!IMPORTANT]  
+> If you want to install this forked version you should run npm install pentamorfico/AlignmentViewer2.0 as explained below
+
 We're on [NPM](https://www.npmjs.com/) ([repository link](https://https://www.npmjs.com/package/alignment-viewer-2/)) so you can install using your favorite package manager, e.g.,:
 
 ```sh
-npm install alignment-viewer-2
+npm install pentamorfico/AlignmentViewer2.0
 ```
 
 Once installed, adding to your website is as simple as:
 
 ```JSX
-import * as React from 'react';
-import { 
-  AlignmentViewer, 
-  FastaAlignment
-} from "alignment-viewer-2";
+import "alignment-viewer-2/style.css";
+import { AlignmentViewer, FastaAlignment } from "alignment-viewer-2";
 
 const fastaFileText = ">target\n" +
                       "ATGCATGC\n" +
